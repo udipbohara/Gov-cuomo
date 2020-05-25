@@ -1,5 +1,5 @@
 
-#in terminal
+__in terminal__:
 
 
 twitterscraper "cuomo -chris" -bd 2020-02-15 -ed 2020-3-01 -o cuomofeb_part1.json
