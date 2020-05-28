@@ -8,7 +8,7 @@ import jsonpickle
 from pprint import pprint 
 
 # Replace the API_KEY and API_SECRET with your application's key and secret.
-auth = tweepy.AppAuthHandler('QoPTOZfeJcoglJQGNguodNSN1','hv5v4zYKceg0fvynAmPSrJd42Zx7zJgvRuvnh47w5mg15XU0Yr')
+auth = tweepy.AppAuthHandler('##################','###################')
 
 api = tweepy.API(auth, wait_on_rate_limit=True,
 				   wait_on_rate_limit_notify=True)
