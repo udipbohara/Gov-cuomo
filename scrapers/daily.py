@@ -30,7 +30,7 @@ for i in range(25,28):
         t.timestamp = t.timestamp.isoformat()
         j.append(t.__dict__)
 
-    file = "may/may{}.json".format(i)
+    file = "may{}.json".format(i)
 
     this_folder = os.path.dirname(os.path.abspath(__file__))
     my_file = os.path.join(this_folder, file)         
