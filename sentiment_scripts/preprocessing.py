@@ -88,11 +88,12 @@ def expand_contractions(text, contraction_mapping=contraction_map):
 #create dictionary of the functions to be applied
 funcdict = {"1": expand_contractions,"2": remove_special_chars, "3": remove_accented_chars,}
 
-#apply the functions in a loop
 march_all['processed_text'] = march_all.text
+march_cuomo['processed_text'] = march_cuomo.text
 
 for k,v in funcdict.items():
     march_all.processed_text = march_all.processed_text.apply(lambda x: v(x))
+    march_cuomo.processed_text = march_cuomo.processed_text.apply(lambda x: v(x))
 
 #remove new line chars and lowercase the letters.
 march_all.processed_text = march_all.processed_text.replace('\n','', regex=True).str.lower()
@@ -117,7 +118,8 @@ df['sentiment_value'] = value
 df['score'] = score 
 df['sentiments'] = sentiments
 
-df.read_csv('../data/march_trained.csv')
+df.to_csv('../data/march_trained.csv')
+march_cuomo.to_csv('../data/march_cuomo.csv')
 
 """
 #converting all the negative sentiments to '-'ve 
