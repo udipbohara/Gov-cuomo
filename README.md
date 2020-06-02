@@ -24,39 +24,6 @@ Other libraries such as [GetOldTweets3](https://github.com/Mottl/GetOldTweets3) 
 There are a few ways of downloading the tweets. They are all provided [here](https://github.com/udipbohara/Gov-cuomo/tree/master/scrapers). _Note_: Due to errors such as Request timeouts/handling errors, it is advisable to download batches of tweets (eg: one day at a time). 
 A total of 327894 tweets were extracted. Here is an example of a json object: Full raw data can be found in /data
 
-``` json
-[
-   {
-      "screen_name":"justice0123",
-      "username":"@justice 4 All aka justice0123",
-      "user_id":"1191989767",
-      "tweet_id":"1256372347218599937",
-      "tweet_url":"/justice0123/status/1256372347218599937",
-      "timestamp":"2020-05-01T23:58:04",
-      "timestamp_epochs":1588377484,
-      "text":"Gov. Cuomo knew what he was doing when he told the nursing home u don't need 2 test these elderly ppl the nursing home responded & told him we don't have the man power or space mind you the Javits ctr was empty & so was the ship where he could have sent them their but he didn't",
-      "text_html":"<p class=\"TweetTextSize js-tweet-text tweet-text\" data-aria-label-part=\"0\" lang=\"en\">Gov. <strong>Cuomo</strong> knew what he was doing when he told the nursing home u don't need 2 test these elderly ppl the nursing home responded &amp; told him we don't have the man power or space mind you the Javits ctr was empty &amp; so was the ship where he could have sent them their but he didn't</p>",
-      "links":[
-
-      ],
-      "hashtags":[
-
-      ],
-      "has_media":false,
-      "img_urls":[
-
-      ],
-      "video_url":"",
-      "likes":0,
-      "retweets":0,
-      "replies":0,
-      "is_replied":false,
-      "is_reply_to":false,
-      "parent_tweet_id":"",
-      "reply_to_users":[
-
-      ]
-   }
 ```
 Part 2: Workings of flair
 ---------------------
@@ -110,7 +77,7 @@ tagger = TextClassifier.load('sentiment')
 sentence = Sentence('Cuomo is doing the best he can!')
 tagger.predict(sentence)
 ```
-
+__The left__ column of the heatmap shows the overall score for the sentence followed by individual scores for the words.
 
 <img src="images/negative_example_sentiment.png" align="left" title="How the algorithm works"/>
 </img>
