@@ -74,9 +74,9 @@ from flair.models import TextClassifier
 from flair.data import Sentence
 example_tweet = "insert tweet here"
 tagger = TextClassifier.load('sentiment')
-sentence = Sentence('Cuomo is doing the best he can!')
-tagger.predict(sentence)
+tagger.predict(example_tweet)
 ```
+
 __The left__ column of the heatmap shows the overall score for the sentence followed by individual scores for the words.
 
 <img src="images/negative_example_sentiment.png" align="left" title="How the algorithm works"/>
