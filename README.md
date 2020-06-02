@@ -93,7 +93,10 @@ Flair sentiment is based on character level pretrained LSTM neutral network whic
 
 The tweets were trained individually by flair. Here is how it works under the hood:
 
-![](https://github.com/udipbohara/Gov-cuomo/blob/master/images/tweet_negative_example.png){:height="50%" width="50%"} 
+
+<p align="center">
+  <img src="images/tweet_negative_example.png" width="300" height="200"/></img>
+</p>
 
 ``` python
 from flair.models import TextClassifier
@@ -102,11 +105,20 @@ example_tweet = 'Cuomo’s career is over'
 tagger = TextClassifier.load('sentiment')
 sentence = Sentence('Cuomo is doing the best he can!')
 tagger.predict(sentence)
-print(sentence.labels)
 ```
 
+This gives an output of:
+```
+[NEGATIVE (0.9835)]
+```
 
+![GitHub Logo](images/tweet_negative_example.png)
+
+
+<img src="https://raw.githubusercontent.com/udipbohara/Gov-cuomo/master/images/negative_example_sentiment.png?token=AL34KU75TUF2R53NR4RZWZK62Z2UQ" width="500" height="600" align="left" title="hover text"/>
+</img>
 
 can handle typos. 
+
 
 
