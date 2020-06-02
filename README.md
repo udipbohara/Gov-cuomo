@@ -105,27 +105,22 @@ The tweets were trained individually by flair. Here is how it works under the ho
 ``` python
 from flair.models import TextClassifier
 from flair.data import Sentence
-example_tweet = 'Cuomo’s career is over'
+example_tweet = "insert tweet here"
 tagger = TextClassifier.load('sentiment')
 sentence = Sentence('Cuomo is doing the best he can!')
 tagger.predict(sentence)
 ```
 
-This gives an output of:
 
 <img src="images/negative_example_sentiment.png" align="left" title="How the algorithm works"/>
 </img>
 
-```
-[NEGATIVE (0.9835)]
-```
+
 
 <img src="images/postive_example_sentiment.png" align="left" title="How the algorithm works"/>
 </img>
 
-```
-[POSITIVE (0.9977)]
-```
+
 
 Part 3: Analysis
 ---------------------
