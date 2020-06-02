@@ -1,4 +1,4 @@
-Analyzing sentiments of tweets mentioning Gov Andrew Cuomo through the COVID-19 pandemic using tweets.
+Analyzing sentiments of tweets mentioning Gov Andrew Cuomo through the COVID-19 pandemic.
 ================
 
 Overview
