@@ -65,7 +65,7 @@ Part 2: Workings of flair
 ```
 $ pip install flair
 ```
-Flair sentiment is based on character level pretrained LSTM neutral network which takes individual words into account while predicting the overall label. Due to it being a strongly pretrained library along with the LSTM approach, the analysis is contextual. Due to that, the library is very well equipped to handle typos as well. 
+Flair sentiment is based on character level pretrained LSTM neutral network which takes individual words into account while predicting the overall label. Due to it being a strongly pretrained library along with the LSTM approach, the analysis is contextual. Due to that, the library is __very well equipped to handle typos as well__. This works perfectly well working with tweets as  they have typos in them.  
 
  Details of the parameters of the model are:
 
@@ -112,14 +112,21 @@ tagger.predict(sentence)
 ```
 
 This gives an output of:
+
+<img src="images/negative_example_sentiment.png" align="left" title="How the algorithm works"/>
+</img>
+
 ```
 [NEGATIVE (0.9835)]
 ```
-<img src="images/negative_example_sentiment.png" align="left" title="How the algorithm works"/>
-</img>
+
 <img src="images/postive_example_sentiment.png" align="left" title="How the algorithm works"/>
 </img>
 
-can handle typos. 
+```
+[POSITIVE (0.9977)]
+```
 
+Part 3: Analysis
+---------------------
 
