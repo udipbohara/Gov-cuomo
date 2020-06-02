@@ -1,4 +1,4 @@
-Analyzing support towards Gov Andrew Cuomo through the COVID-19 pandemic using tweets.
+Analyzing sentiments of tweets mentioning Gov Andrew Cuomo through the COVID-19 pandemic using tweets.
 ================
 
 Overview
@@ -14,16 +14,6 @@ Scope of this project:
 I have __excluded__ retweets, replies and links as I believe, as a retweet/reply is more of a response to a tweet/article rather than a general sentiment towards Gov Cuomo. In doing so, I have also filtered out news articles as they are associated with links. Also, I have excluded tweets that contain 'chris' in them to avoid getting sentiments for Chris Cuomo (brother of Gov. Andrew Cuomo)
 
 
-The following module from python is required to run the sentiments:
-
-```
-$ pip install flair
-```
-
-``` python
-print('hello world!)
-```
-
 Part 1: Download Data
 ---------------------
 
@@ -32,7 +22,7 @@ The conventional tweeter API - [Tweepy](https://github.com/tweepy/tweepy) can be
 Other libraries such as [GetOldTweets3](https://github.com/Mottl/GetOldTweets3) and [twitterscraper](https://github.com/taspinar/twitterscraper) provide excellent alternatives, specially when downloading historical data. 
 
 There are a few ways of downloading the tweets. They are all provided [here](https://github.com/udipbohara/Gov-cuomo/tree/master/scrapers). _Note_: Due to errors such as Request timeouts/handling errors, it is advisable to download batches of tweets (eg: one day at a time). 
-Here is an example of a json object: Full raw data can be found in /data
+A total of 327894 tweets were extracted. Here is an example of a json object: Full raw data can be found in /data
 
 ``` json
 [
@@ -68,15 +58,16 @@ Here is an example of a json object: Full raw data can be found in /data
       ]
    }
 ```
+Part 2: Workings of flair
+---------------------
+[Flair](https://github.com/flairNLP/flair) is a state of the art library for NLP. Sentiment analysis done using the [distilBERT](https://arxiv.org/pdf/1910.01108.pdf): a framework built on top of BERT. 
 
+```
+$ pip install flair
+```
+Flair sentiment is based on character level pretrained LSTM neutral network which takes individual words into account while predicting the overall label. Details of the parameters of the model are:
 
-
-
-
-
-
-Flair sentiment model:
-```python
+``` python
  Model config DistilBertConfig {
   "activation": "gelu",
   "architectures": [
@@ -99,38 +90,23 @@ Flair sentiment model:
   "vocab_size": 30522
 }
 ```
-__in terminal__:
+
+The tweets were trained individually by flair. Here is how it works under the hood:
+
+![](Gov-cuomo/images/tweet_negative_example.png)
+
+``` python
+from flair.models import TextClassifier
+from flair.data import Sentence
+example_tweet = 'Cuomo’s career is over'
+tagger = TextClassifier.load('sentiment')
+sentence = Sentence('Cuomo is doing the best he can!')
+tagger.predict(sentence)
+print(sentence.labels)
+```
 
 
-twitterscraper "cuomo -chris" -bd 2020-02-15 -ed 2020-3-01 -o cuomofeb_part1.json
 
-twitterscraper "cuomo -chris" -bd 2020-3-01 -ed 2020-3-15 -o cuomo_march_part1.json
-
-twitterscraper "cuomo -chris" -bd 2020-3-15 -ed 2020-3-31 -o cuomo_march_part2.json
+can handle typos. 
 
 
-
-#doing with fixed one.
-
-twitterscraper "cuomo -chris" -bd 2020-3-31 -ed 2020-4-15 -o cuomo_april_part2.json
-
-
-#info about virus
-On January 19, 2020, a 35-year-old man presented to an urgent care clinic in Snohomish County, Washington, with a 4-day history of cough and subjective fever.
-
-
-jan15-31:
-Found: 40188 tweets
-Wrote: 4477 tweets
-
-jan31-feb15:
-Found: 49487 tweets
-Wrote: 4943 tweets
-
-feb-16-29
-Found: 27079 tweets
-Wrote: 3369 tweets
-
-march-01-15
-Found: 139582 tweets
-Wrote: 9586 tweets
