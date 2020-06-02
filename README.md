@@ -24,7 +24,7 @@ Other libraries such as [GetOldTweets3](https://github.com/Mottl/GetOldTweets3) 
 There are a few ways of downloading the tweets. They are all provided [here](https://github.com/udipbohara/Gov-cuomo/tree/master/scrapers). _Note_: Due to errors such as Request timeouts/handling errors, it is advisable to download batches of tweets (eg: one day at a time). 
 A total of 327894 tweets were extracted. Here is an example of a json object: Full raw data can be found in /data
 
-```
+
 Part 2: Workings of flair
 ---------------------
 [Flair](https://github.com/flairNLP/flair) is a state of the art library for NLP. Sentiment analysis done using the [distilBERT](https://arxiv.org/pdf/1910.01108.pdf): a framework built on top of BERT. 
