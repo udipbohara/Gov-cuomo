@@ -65,7 +65,9 @@ Part 2: Workings of flair
 ```
 $ pip install flair
 ```
-Flair sentiment is based on character level pretrained LSTM neutral network which takes individual words into account while predicting the overall label. Details of the parameters of the model are:
+Flair sentiment is based on character level pretrained LSTM neutral network which takes individual words into account while predicting the overall label. Due to it being a strongly pretrained library along with the LSTM approach, the analysis is contextual. Due to that, the library is very well equipped to handle typos as well. 
+
+ Details of the parameters of the model are:
 
 ``` python
  Model config DistilBertConfig {
@@ -96,6 +98,8 @@ The tweets were trained individually by flair. Here is how it works under the ho
 
 <p align="center">
   <img src="images/tweet_negative_example.png" width="300" height="200"/></img>
+  <img src="images/tweet_positive_example.png" width="400" height="200"/>
+</img>
 </p>
 
 ``` python
@@ -111,6 +115,10 @@ This gives an output of:
 ```
 [NEGATIVE (0.9835)]
 ```
+<img src="images/negative_example_sentiment.png" align="left" title="How the algorithm works"/>
+</img>
+<img src="images/postive_example_sentiment.png" align="left" title="How the algorithm works"/>
+</img>
 
 can handle typos. 
 
