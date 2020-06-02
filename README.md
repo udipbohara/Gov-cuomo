@@ -34,34 +34,8 @@ $ pip install flair
 ```
 Flair sentiment is based on character level pretrained LSTM neutral network which takes individual words into account while predicting the overall label. Due to it being a strongly pretrained library along with the LSTM approach, the analysis is contextual. Due to that, the library is __very well equipped to handle typos as well__. This works perfectly well working with tweets as  they have typos in them.  
 
- Details of the parameters of the model are:
-
-``` python
- Model config DistilBertConfig {
-  "activation": "gelu",
-  "architectures": [
-    "DistilBertForMaskedLM"
-  ],
-  "attention_dropout": 0.1,
-  "dim": 768,
-  "dropout": 0.1,
-  "hidden_dim": 3072,
-  "initializer_range": 0.02,
-  "max_position_embeddings": 512,
-  "model_type": "distilbert",
-  "n_heads": 12,
-  "n_layers": 6,
-  "pad_token_id": 0,
-  "qa_dropout": 0.1,
-  "seq_classif_dropout": 0.2,
-  "sinusoidal_pos_embds": false,
-  "tie_weights_": true,
-  "vocab_size": 30522
-}
-```
 
 The tweets were trained individually by flair. Here is how it works under the hood:
-
 
 <p align="center">
   <img src="images/tweet_negative_example.png" width="300" height="200"/></img>
