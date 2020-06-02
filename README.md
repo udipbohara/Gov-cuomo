@@ -112,10 +112,6 @@ This gives an output of:
 [NEGATIVE (0.9835)]
 ```
 
-<img src="https://github.com/udipbohara/Gov-cuomo/blob/master/images/negative_example_sentiment.png" align="left" title="How the algorithm works"/>
-</img>
-
 can handle typos. 
-
 
 
