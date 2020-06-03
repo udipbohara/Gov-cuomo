@@ -75,11 +75,9 @@ However, upon stack-plotting the count for tweets of sentiments, it is apparent 
 
 <img src="images/main_plot.png"> </img>
 
-<p align="center">
- <img src="images/march_24_1.png"> width="300" height="50"/></img>
- <img src="images/march_24_2.png"> width="100" height="50"/></img>
- <img src="images/march_24_3.png"> width="300" height="50"/></img>
 
-</p>
+ <img src="images/march_24_1.png"> width="100" height="50"/></img>
+
+
 
 
