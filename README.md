@@ -52,22 +52,17 @@ The tweets were trained individually by flair. Here is how it works under the ho
 </p>
 
 
-
-__The left__ column of the heatmap shows the overall score for the sentence followed by individual scores for the words. The second tweet has the word 'f*cked' in it. As mentioned above, even when the words are mispelled or written incorrectly, flair recognizes it and tags it with a negative score. 
-
 <img src="images/negative_example_sentiment.png" align="left"/>
 </img>
-
-
 
 <img src="images/postive_example_sentiment.png" align="left"/>
 </img>
 
+__The left__ column of the heatmap shows the overall score for the sentence followed by individual scores for the words. The second tweet has the word 'f*cked' in it. As mentioned above, even when the words are mispelled or written incorrectly, flair recognizes it and tags it with a negative score. 
 
 Part 3: Analysis
 ---------------------
 
-The code done for that can be found in analysis.ipynb. 
 With the rise in the covid cases, the number of tweets increased almost symmetrically as shown by the graph below.
 Important to note that the data date range  is __02/01/2020 to 05/27/2020__
 <img src="images/total_first.png"></img>
@@ -87,7 +82,9 @@ Upon plotting the tweets as a 'clock-plot' it became evident that most of the tw
 
 <img src="images/march_24clock.png" width="425" height="425"/></img>
 <img src="images/april_11clock.png" width="425" height="425"/></img>
+<p align = 'center'> The times are in UTC zone </p>
 
+_The code found in analysis.ipynb_
 
 Part 4: Conclusion
 ---------------------
