@@ -79,11 +79,11 @@ We can see a clear spike on March 24th. Upon looking further into that date, it 
 
 His tweets vaildate the concern on that day:
 
- <img src="images/march_24_1.png" width="300" height="100"/></img>
- <img src="images/march_24_2.png" width="295" height="95"/></img>
- <img src="images/march_24_3.png" width="295" height="95"/></img>
+ <img src="images/march_24_1.png" width="295" height="95"/></img>
+ <img src="images/march_24_2.png" width="285" height="90"/></img>
+ <img src="images/march_24_3.png" width="285" height="90"/></img>
 
 Upon plotting the tweets as a 'clock-plot' it became evident that most of the tweets were after 1:00PM / 13:00 UTC which was when he held daily press conferences. So, it was quite interesting to see the correlation in that. Even in days with lesser counts, the cluster during that timeframe remained the same. 
 
-<img src="images/march_24clock.png" width="450" height="450"/></img>
-<img src="images/april_11clock.png" width="450" height="450"/></img>
+<img src="images/march_24clock.png" width="425" height="425"/></img>
+<img src="images/april_11clock.png" width="425" height="425"/></img>
