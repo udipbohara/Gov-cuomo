@@ -75,9 +75,15 @@ However, upon stack-plotting the count for tweets of sentiments, it is apparent 
 
 <img src="images/main_plot.png"> </img>
 
+We can see a clear spike on March 24th. Upon looking further into that date, it was when Gov Cuomo made a compelling speech against Coronavirus asking the federal govermen for more ventilators. He also made moving addresses in his press conference for that day. 
 
- <img src="images/march_24_1.png"> width="100" height="50"/></img>
+His tweets vaildate the concern on that day:
 
+ <img src="images/march_24_1.png" width="300" height="100"/></img>
+ <img src="images/march_24_2.png" width="295" height="95"/></img>
+ <img src="images/march_24_3.png" width="295" height="95"/></img>
 
+Upon plotting the tweets as a 'clock-plot' it became evident that most of the tweets were after 1:00PM / 13:00 UTC which was when he held daily press conferences. So, it was quite interesting to see the correlation in that. Even in days with lesser counts, the cluster during that timeframe remained the same. 
 
-
+ <img src="images/march_24clock.png" width="450" height="450"/></img>
+  <img src="images/april_11clock.png" width="450" height="450"/></img>
