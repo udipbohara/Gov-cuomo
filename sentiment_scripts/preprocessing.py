@@ -16,6 +16,8 @@ files = glob.glob('../data/march/*.json')
 dfs = [pd.read_json(f) for f in files]
 df_march = pd.concat(dfs,ignore_index=True)
 
+cuomo = pd.read_json('../data/cuomo_tweets.json')
+
 
 df_march.user_id = df_march.user_id.astype(str)
 df_march.tweet_id = df_march.tweet_id.astype(str)
@@ -23,7 +25,7 @@ df_march.tweet_id = df_march.tweet_id.astype(str)
 #drop duplicates
 df_march.drop_duplicates('tweet_id', inplace=True)
 #Filtering tweets of Gov Cuomo by his user ID.
-march_cuomo = df_march.loc[df_march.user_id ==  '232268199']
+
 
 #remove all tweets from Gov Cuomo and drop duplicates for tweets.
 march_all = df_march.loc[df_march.user_id !='232268199']
@@ -89,14 +91,15 @@ def expand_contractions(text, contraction_mapping=contraction_map):
 funcdict = {"1": expand_contractions,"2": remove_special_chars, "3": remove_accented_chars,}
 
 march_all['processed_text'] = march_all.text
-march_cuomo['processed_text'] = march_cuomo.text
+cuomo['processed_text'] = cuomo.text
 
 for k,v in funcdict.items():
     march_all.processed_text = march_all.processed_text.apply(lambda x: v(x))
-    march_cuomo.processed_text = march_cuomo.processed_text.apply(lambda x: v(x))
+    cuomo.processed_text = cuomo.processed_text.apply(lambda x: v(x))
 
 #remove new line chars and lowercase the letters.
 march_all.processed_text = march_all.processed_text.replace('\n','', regex=True).str.lower()
+cuomo.processed_text = cuomo.processed_text.replace('\n','', regex=True).str.lower()
 
 df = march_all.copy() 
 
@@ -119,7 +122,7 @@ df['score'] = score
 df['sentiments'] = sentiments
 
 df.to_csv('../data/march_trained.csv')
-march_cuomo.to_csv('../data/march_cuomo.csv')
+cuomo.to_csv('../data/cuomo_tweets.csv')
 
 """
 #converting all the negative sentiments to '-'ve 

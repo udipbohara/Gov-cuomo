@@ -5,8 +5,6 @@ import os
 import time
 #import time
 
-#31 December 2019, health authorities in China reported to the World 
-#The COVID-19 pandemic spread to the United States on January 19, 2020
 
 
 #begin_date = dt.date(2020,2,1)
@@ -14,23 +12,19 @@ import time
 #file = "march3"
 #filename = "{}.json".format(file) 
 #length_of_each = {}
-for i in range(25,28):
+for i in range(1,31):
     query = "cuomo -chris lang:en until:2020-05-{} since:2020-05-{} -filter:links -filter:replies".format(i+1, i)
-    tweets = query_tweets(query) #, begindate=begin_date,
-                                #    enddate=end_date)
-        
+    tweets = query_tweets(query) 
 
     print("Found: {} tweets".format(len(tweets)))
 
 
-    #"screen_name","username","user_id",
-    #"timestamp","text"
     j = []
     for t in tweets:
         t.timestamp = t.timestamp.isoformat()
         j.append(t.__dict__)
 
-    file = "may{}.json".format(i)
+    file = "may/may{}.json".format(i)
 
     this_folder = os.path.dirname(os.path.abspath(__file__))
     my_file = os.path.join(this_folder, file)         
@@ -47,10 +41,3 @@ for i in range(25,28):
 
 
 #automate length of each
-"""
-txt_file = os.path.join(this_folder, "april/length_of_each.txt") 
-with open(txt_file,"w") as file:
-    for key,value in length_of_each.items():
-        file.write('{} : {}\n'.format(key,value))
-file.close()
-"""
