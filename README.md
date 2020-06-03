@@ -6,7 +6,7 @@ Overview
 
 In this project, I analyzed tweets that mentioned 'cuomo' over the months of the pandemic to analyze the sentiments towards Governor Andrew Cuomo. I used pre-trained library flair to get sentiments of all the tweets and visualized it.
 
-The first case of COVID-19 in the U.S. state of New York during the pandemic was confirmed on March 1, 2020. I have used the tweets from 02/15/2020 to 05/18/2020 to run sentiment analysis on it. 
+The first case of COVID-19 in the U.S. state of New York during the pandemic was confirmed on March 1, 2020. I have used the tweets from 02/15/2020 to 05/27/2020 to run sentiment analysis on it. 
 
 Scope of this project:
 --------
@@ -67,6 +67,19 @@ __The left__ column of the heatmap shows the overall score for the sentence foll
 
 Part 3: Analysis
 ---------------------
-With the rise in the covid cases, the rise in the tweets increased 
+With the rise in the covid cases, the rise in the tweets increased almost symmetrically as shown by the graph below.
+Important to note that the date range  is __05/27/2020__
+<img src="images/total_first.png"></img>
 
-<img src="images/total_first.png"> width="300" height="200"/></img>
+However, upon stack-plotting the count for tweets of sentiments, it is apparent that the negative tweets are much larger compared to the neutral and positive tweets.
+
+<img src="images/main_plot.png"> </img>
+
+<p align="center">
+ <img src="images/march_24_1.png"> width="300" height="50"/></img>
+ <img src="images/march_24_2.png"> width="100" height="50"/></img>
+ <img src="images/march_24_3.png"> width="300" height="50"/></img>
+
+</p>
+
+
