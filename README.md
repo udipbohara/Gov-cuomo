@@ -8,7 +8,7 @@ In this project, I trained tweets that mentioned 'cuomo' over three months of th
 
 The first case of COVID-19 in the U.S. state of New York during the pandemic was confirmed on March 1, 2020. I have used the tweets from 02/01/2020 to 05/27/2020 to run sentiment analysis on it to get a prior reference of mentions. 
 
-Scope of this project:
+Scope of the project:
 --------
 
 I have __excluded__ retweets, replies and links as I believe that retweets/replies are more of a response to a tweet/article rather than a general sentiment towards Gov Cuomo/or his decisions. In doing so, I have also filtered out news articles as they are associated with links. Finally, I excluded tweets that contain 'chris' in them to avoid getting sentiments for Chris Cuomo (brother of Gov. Andrew Cuomo)
@@ -34,7 +34,7 @@ Part 2: How does flair work?
 ```
 $ pip install flair
 ```
-Flair sentiment is based on character level pretrained LSTM neutral network which takes the context of the words into account while predicting the overall label. It is an open source library with many contributions for training the models which gives it the strength in being able to make good predictions. Due to that, the library is __very well equipped to handle typos as well__. This works perfectly well with tweets as they are bound to have typos in them.  
+Flair sentiment is based on character level pretrained LSTM network built on PyTorch which takes the context of the words into account while predicting the overall label. It is an open source library with many contributions for training the models which gives it the strength in being able to make good predictions. Due to that, the library is __very well equipped to handle typos as well__. This works perfectly well with tweets as they are bound to have typos in them.  
 ``` python
 from flair.models import TextClassifier
 from flair.data import Sentence
