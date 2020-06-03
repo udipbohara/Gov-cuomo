@@ -85,5 +85,5 @@ His tweets vaildate the concern on that day:
 
 Upon plotting the tweets as a 'clock-plot' it became evident that most of the tweets were after 1:00PM / 13:00 UTC which was when he held daily press conferences. So, it was quite interesting to see the correlation in that. Even in days with lesser counts, the cluster during that timeframe remained the same. 
 
- <img src="images/march_24clock.png" width="450" height="450"/></img>
-  <img src="images/april_11clock.png" width="450" height="450"/></img>
+<img src="images/march_24clock.png" width="450" height="450"/></img>
+<img src="images/april_11clock.png" width="450" height="450"/></img>
