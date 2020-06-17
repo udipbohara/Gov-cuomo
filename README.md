@@ -84,7 +84,7 @@ Upon plotting the tweets as a 'clock-plot' it became evident that most of the tw
 <img src="images/april_11clock.png" width="425" height="425"/></img>
 <p align = 'center'> The times are in UTC zone </p>
 
-_The code found in [analysis.ipynb](analysis.ipynb)_
+_The code to produce the results/visualizations is in [analysis.ipynb](analysis.ipynb)_
 
 Part 4: Conclusion
 ---------------------
