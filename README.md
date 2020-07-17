@@ -80,8 +80,8 @@ We can see the largest spike on March 24th. Upon looking further into that date,
 
 Upon plotting the tweets as a 'clock-plot' it became evident that most of the tweets were after 1:00PM / 13:00 UTC which was when he held daily press conferences. So, it was quite interesting to see the correlation in that. Even in days with lesser counts, the cluster during that timeframe remained the same. 
 
-<img src="images/march_24clock.png" width="425" height="425"/></img>
-<img src="images/april_11clock.png" width="425" height="425"/></img>
+<img src="images/march_24clock.png" width="400" height="400"/></img>
+<img src="images/april_11clock.png" width="400" height="400"/></img>
 <p align = 'center'> The times are in UTC zone </p>
 
 _The code to produce the results/visualizations is in [analysis.ipynb](analysis.ipynb)_
